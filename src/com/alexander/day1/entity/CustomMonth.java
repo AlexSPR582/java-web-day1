@@ -29,4 +29,13 @@ public enum CustomMonth {
     public int getDays() {
         return days;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("CustomMonth{");
+        sb.append("monthNumber=").append(monthNumber);
+        sb.append(", days=").append(days);
+        sb.append('}');
+        return sb.toString();
+    }
 }

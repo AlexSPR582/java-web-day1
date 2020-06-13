@@ -1,9 +1,9 @@
 package com.alexander.day1.entity;
 
 public class CustomTime {
-    private int hours = 0;
-    private int minutes = 0;
-    private int seconds = 0;
+    private int hours;
+    private int minutes;
+    private int seconds;
 
     public CustomTime(int hours, int minutes, int seconds) {
         this.hours = hours;

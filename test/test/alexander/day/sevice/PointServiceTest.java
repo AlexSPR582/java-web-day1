@@ -1,10 +1,10 @@
 package test.alexander.day.sevice;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
 
 import com.alexander.day1.entity.Point;
 import com.alexander.day1.service.PointService;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -22,7 +22,7 @@ public class PointServiceTest {
         Point point2 = new Point(3, 2);
         int actual = service.findNearestPoint(point1, point2);
         int expected = 1;
-        assertEquals(actual, expected);
+        assertEquals(actual, expected, "fail test");
     }
 
     @Test
@@ -31,6 +31,6 @@ public class PointServiceTest {
         Point point2 = new Point(4, 7);
         int actual = service.findNearestPoint(point1, point2);
         int expected = 1;
-        Assert.assertNotEquals(actual, expected);
+        assertNotEquals(actual, expected, "fail test");
     }
 }

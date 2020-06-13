@@ -21,7 +21,7 @@ public class CircleServiceTest {
         try {
             double actualPerimeter = service.calculateCirclePerimeter(5);
             double expected = 31.4;
-            Assert.assertEquals(actualPerimeter, expected, 0.001, "fail test...");
+            Assert.assertEquals(actualPerimeter, expected, 0.0001, "fail test...");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
@@ -32,7 +32,7 @@ public class CircleServiceTest {
         try {
             double actualPerimeter = service.calculateCirclePerimeter(5);
             double expected = 25;
-            Assert.assertNotEquals(actualPerimeter, expected, 0.001, "fail test...");
+            Assert.assertNotEquals(actualPerimeter, expected, 0.0001, "fail test...");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
@@ -48,7 +48,7 @@ public class CircleServiceTest {
         try {
             double actualArea = service.calculateCircleArea(5);
             double expectedArea = 78.53;
-            Assert.assertEquals(actualArea, expectedArea, 0.01, "fail test...");
+            Assert.assertEquals(actualArea, expectedArea, 0.0001, "fail test...");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
@@ -59,7 +59,7 @@ public class CircleServiceTest {
         try {
             double actualArea = service.calculateCircleArea(5);
             double expectedArea = 80;
-            Assert.assertNotEquals(actualArea, expectedArea, 0.01, "fail test...");
+            Assert.assertNotEquals(actualArea, expectedArea, 0.0001, "fail test...");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }

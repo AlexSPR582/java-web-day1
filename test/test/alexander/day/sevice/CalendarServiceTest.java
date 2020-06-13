@@ -1,6 +1,5 @@
 package test.alexander.day.sevice;
 
-
 import com.alexander.day1.exception.IncorrectInputException;
 import com.alexander.day1.service.CalendarService;
 import org.testng.annotations.BeforeClass;
@@ -21,7 +20,7 @@ public class CalendarServiceTest {
         try {
             int actual = service.calculateDays(2, 2020);
             int expected = 29;
-            assertEquals(actual, expected);
+            assertEquals(actual, expected, "fail test");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
@@ -32,7 +31,7 @@ public class CalendarServiceTest {
         try {
             int actual = service.calculateDays(2, 2019);
             int expected = 29;
-            assertNotEquals(actual, expected);
+            assertNotEquals(actual, expected, "fail test");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
@@ -47,7 +46,7 @@ public class CalendarServiceTest {
     public void isLeapTestPositive() {
         try {
             boolean actual = service.isLeapYear(2020);
-            assertTrue(actual);
+            assertTrue(actual, "fail test");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
@@ -57,7 +56,7 @@ public class CalendarServiceTest {
     public void isLeapTestNegative() {
         try {
             boolean actual = service.isLeapYear(2019);
-            assertFalse(actual);
+            assertFalse(actual, "fail test");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }

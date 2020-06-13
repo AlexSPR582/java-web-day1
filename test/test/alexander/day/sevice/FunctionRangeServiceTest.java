@@ -31,17 +31,17 @@ public class FunctionRangeServiceTest {
         double actual4 = actualMap.get(3.6000000000000005);
         double actual5 = actualMap.get(3.8000000000000007);
 
-        double expected1 = -0.1425465430742778;
-        double expected2 = 0.058473854459578645;
-        double expected3 = 0.26431690086742565;
-        double expected4 = 0.4934667299849044;
-        double expected5 = 0.7735560905031272;
+        double expected1 = -0.1425;
+        double expected2 = 0.05847;
+        double expected3 = 0.26435;
+        double expected4 = 0.4934;
+        double expected5 = 0.7735;
 
-        assertEquals(actual1, expected1);
-        assertEquals(actual2, expected2);
-        assertEquals(actual3, expected3);
-        assertEquals(actual4, expected4);
-        assertEquals(actual5, expected5);
+        assertEquals(actual1, expected1, 0.0001,"fail test");
+        assertEquals(actual2, expected2, 0.0001,"fail test");
+        assertEquals(actual3, expected3, 0.0001,"fail test");
+        assertEquals(actual4, expected4, 0.0001,"fail test");
+        assertEquals(actual5, expected5, 0.0001,"fail test");
     }
 
     @Test
@@ -58,16 +58,16 @@ public class FunctionRangeServiceTest {
         double actual4 = actualMap.get(3.6000000000000005);
         double actual5 = actualMap.get(3.8000000000000007);
 
-        double expected1 = -0.925465430742778;
-        double expected2 = 0.98473854459578645;
-        double expected3 = 0.231690086742565;
-        double expected4 = 0.6667299849044;
-        double expected5 = 0.535560905031272;
+        double expected1 = -0.9254;
+        double expected2 = 0.9847;
+        double expected3 = 0.2316;
+        double expected4 = 0.6667;
+        double expected5 = 0.5355;
 
-        assertNotEquals(actual1, expected1);
-        assertNotEquals(actual2, expected2);
-        assertNotEquals(actual3, expected3);
-        assertNotEquals(actual4, expected4);
-        assertNotEquals(actual5, expected5);
+        assertNotEquals(actual1, expected1, 0.0001, "fail test");
+        assertNotEquals(actual2, expected2, 0.0001,"fail test");
+        assertNotEquals(actual3, expected3, 0.0001,"fail test");
+        assertNotEquals(actual4, expected4, 0.0001,"fail test");
+        assertNotEquals(actual5, expected5, 0.0001,"fail test");
     }
 }

@@ -18,12 +18,12 @@ public class PerfectNumberServiceTest {
     @Test
     public void testIsPerfectNumberPositive() {
         boolean actual = service.isPerfectNumber(6);
-        assertTrue(actual);
+        assertTrue(actual, "fail test");
     }
 
     @Test
     public void testIsPerfectNumberNegative() {
         boolean actual = service.isPerfectNumber(8);
-        assertFalse(actual);
+        assertFalse(actual, "fail test");
     }
 }

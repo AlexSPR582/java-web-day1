@@ -22,7 +22,7 @@ public class ShapeServiceTest {
         try {
             double actualArea = service.calculateInscribedSquareArea(10);
             double expectedArea = 5;
-            assertEquals(actualArea, expectedArea, 0.001, "fail test");
+            assertEquals(actualArea, expectedArea, 0.0001, "fail test");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
@@ -33,7 +33,7 @@ public class ShapeServiceTest {
         try {
             double actualArea = service.calculateInscribedSquareArea(10);
             double expectedArea = 6;
-            assertNotEquals(actualArea, expectedArea, "fail test");
+            assertNotEquals(actualArea, expectedArea, 0.0001, "fail test");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
@@ -49,7 +49,7 @@ public class ShapeServiceTest {
         try {
             double actual = service.calculateDifference(40);
             double expected = 2;
-            assertEquals(actual, expected, 0.01, "fail test");
+            assertEquals(actual, expected, 0.0001, "fail test");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
@@ -60,7 +60,7 @@ public class ShapeServiceTest {
         try {
             double actual = service.calculateDifference(40);
             double expected = 3;
-            assertNotEquals(actual, expected, 0.01, "fail test");
+            assertNotEquals(actual, expected, 0.0001, "fail test");
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
