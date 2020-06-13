@@ -1,13 +1,9 @@
 package com.alexander.day1.entity;
 
-import java.util.Objects;
-
 public class CustomTime {
     private int hours = 0;
     private int minutes = 0;
     private int seconds = 0;
-
-    public CustomTime() {}
 
     public CustomTime(int hours, int minutes, int seconds) {
         this.hours = hours;
@@ -40,10 +36,17 @@ public class CustomTime {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CustomTime time = (CustomTime) o;
+    public boolean equals(Object object) {
+        if (object == null) {
+            return false;
+        }
+        if (this == object) {
+            return true;
+        }
+        if (getClass() != object.getClass()) {
+            return false;
+        }
+        CustomTime time = (CustomTime) object;
         return hours == time.hours &&
                 minutes == time.minutes &&
                 seconds == time.seconds;
@@ -51,6 +54,16 @@ public class CustomTime {
 
     @Override
     public int hashCode() {
-        return Objects.hash(hours, minutes, seconds);
+        return 31 * hours * minutes * seconds;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("CustomTime{");
+        sb.append("hours=").append(hours);
+        sb.append(", minutes=").append(minutes);
+        sb.append(", seconds=").append(seconds);
+        sb.append('}');
+        return sb.toString();
     }
 }

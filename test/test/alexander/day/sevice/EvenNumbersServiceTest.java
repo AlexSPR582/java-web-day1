@@ -2,10 +2,16 @@ package test.alexander.day.sevice;
 
 import com.alexander.day1.service.EvenNumbersService;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class EvenNumbersServiceTest {
-    EvenNumbersService service = new EvenNumbersService();
+    EvenNumbersService service;
+
+    @BeforeClass
+    public void setUp() {
+        service = new EvenNumbersService();
+    }
 
     @Test
     public void testHaveTwoEvenNumbersPositive() {

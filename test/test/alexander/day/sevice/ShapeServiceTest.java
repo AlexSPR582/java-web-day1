@@ -40,7 +40,7 @@ public class ShapeServiceTest {
     }
 
     @Test (expectedExceptions = IncorrectInputException.class)
-    public void testInscribedSquareAreaError() throws IncorrectInputException {
+    public void testInscribedSquareAreaException() throws IncorrectInputException {
         service.calculateInscribedSquareArea(-45);
     }
 
@@ -56,7 +56,7 @@ public class ShapeServiceTest {
     }
 
     @Test
-    public void testCalculateDifferenceNegative() {
+    public void Negative() {
         try {
             double actual = service.calculateDifference(40);
             double expected = 3;
@@ -64,5 +64,10 @@ public class ShapeServiceTest {
         } catch (IncorrectInputException e) {
             fail("exception occurred");
         }
+    }
+
+    @Test (expectedExceptions = IncorrectInputException.class)
+    public void testCalculateDifferenceException() throws IncorrectInputException {
+        service.calculateDifference(-7);
     }
 }
